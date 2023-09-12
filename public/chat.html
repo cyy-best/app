@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <!-- 引入 Bootstrap 样式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <!-- 聊天消息显示区域 -->
+        <div class="chat-box">
+            <div class="message sent">
+                <div class="message-content">
+                    Hello, how can I help you? This is a longer message to test the auto width.
+                </div>
+            </div>
+            <!-- 添加更多消息 -->
+        </div>
+
+        <!-- 输入框 -->
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Type your message..." id="message-input">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="send-button">Send</button>
+            </div>
+        </div>
+
+        <!-- 警告消息区域 -->
+        <div class="warning-message mt-2" style="display: none;">Please enter a non-empty message.</div>
+    </div>
+
+    <!-- 引入 Bootstrap 和 jQuery 库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

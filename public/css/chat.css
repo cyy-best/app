@@ -1,0 +1,32 @@
+/* 自定义样式 */
+.message {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    word-wrap: break-word;
+}
+
+
+.message .message-content {
+    width: auto;
+    /* 让消息框自适应宽度 */
+    max-width: 100%;
+    /* 限制消息框最大宽度 */
+}
+
+.sent {
+    background-color: #f2f2f2;
+    color: #000;
+    text-align: right;
+}
+
+.received {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.warning-message {
+    color: red;
+}
