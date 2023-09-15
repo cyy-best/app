@@ -19,7 +19,7 @@ const fakeUsers = [
     // 添加更多虚拟用户数据
 ];
 app.get('/', (req, res) => {
-    res.redirect('/public/index.html');// 可以根据需要返回适当的响应
+    res.sendFile(__dirname + 'public/index.html');
 });
 // 注册路由
 app.post('/register', (req, res) => {
@@ -59,18 +59,18 @@ app.post('/login', (req, res) => {
 
 app.get('/chat', (req, res) => {
     // 在这里渲染 chat.html 页面
-    res.sendFile(__dirname + '/public/chat.html');
+    res.sendFile(__dirname + 'public/chat.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/public/login.html');
+    res.sendFile(__dirname + 'public/login.html');
 });
 // 连接到数据库（如果使用MongoDB）
 // mongoose.connect('mongodb://localhost/your-database-name', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // 定义用户模型和路由
-const User = require('./models/User'); // 创建User模型
-const authRoutes = require('./routes/auth'); // 创建路由
+const User = require('./backEnd/models/User'); // 创建User模型
+const authRoutes = require('./backEnd/routes/auth'); // 创建路由
 
 app.use('/auth', authRoutes);
 
