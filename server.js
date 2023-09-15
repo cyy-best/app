@@ -59,12 +59,15 @@ app.post('/login', (req, res) => {
 
 app.get('/chat', (req, res) => {
     // 在这里渲染 chat.html 页面
-    res.sendFile(__dirname + 'public/chat.html');
+    res.sendFile(__dirname + '/public/chat.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + 'public/login.html');
+    res.sendFile(__dirname + '/public/login.html');
 });
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/public/register.html');
+})
 // 连接到数据库（如果使用MongoDB）
 // mongoose.connect('mongodb://localhost/your-database-name', { useNewUrlParser: true, useUnifiedTopology: true });
 

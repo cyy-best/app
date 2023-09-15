@@ -5,8 +5,17 @@
     border-radius: 5px;
     width: fit-content;
     word-wrap: break-word;
+    max-width: 100%;
 }
 
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    /* 垂直方向的 Flex 布局 */
+    height: 75vh;
+    /* 设置聊天区域的高度 */
+
+}
 
 .message .message-content {
     width: auto;
@@ -18,13 +27,15 @@
 .sent {
     background-color: #f2f2f2;
     color: #000;
-    text-align: right;
+    text-align: left;
+    align-self: flex-end;
 }
 
 .received {
     background-color: #007bff;
     color: #fff;
     text-align: left;
+    align-self: flex-start;
 }
 
 .warning-message {
